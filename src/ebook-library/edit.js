@@ -11,15 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './editor.scss';
+import {InspectorControls, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -31,8 +23,17 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Hello World!', 'ebook-library' ) }
-		</p>
+		<>
+
+			<InspectorControls>
+				Testing
+			</InspectorControls>
+
+
+			<p { ...useBlockProps() }>
+				{ __( 'Hello From my New WP Block.', 'ebook-library' ) }
+			</p>
+		
+		</>
 	);
 }

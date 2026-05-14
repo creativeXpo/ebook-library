@@ -8,12 +8,25 @@
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
+	"": {
+		"showStartingYear": {
+			"type": "boolean"
+		}, 
+		"startingYear": {
+			"type": "string"
+		}
+	},
 	"supports": {
-		"html": false
+		"color": {
+			"background": false,
+			"text": true
+		},
+		"html": false,
+		"typography": {
+			"fontSize": true
+		}
 	},
 	"textdomain": "ebook-library",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+	"render": "file:./render.php"
 }

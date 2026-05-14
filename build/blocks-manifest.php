@@ -13,13 +13,26 @@ return array(
 		'example' => array(
 			
 		),
+		'' => array(
+			'showStartingYear' => array(
+				'type' => 'boolean'
+			),
+			'startingYear' => array(
+				'type' => 'string'
+			)
+		),
 		'supports' => array(
-			'html' => false
+			'color' => array(
+				'background' => false,
+				'text' => true
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true
+			)
 		),
 		'textdomain' => 'ebook-library',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
 	)
 );
